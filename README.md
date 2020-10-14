@@ -58,6 +58,30 @@ charles,charles@polarity.io,Charles Charley,false,false,PolarityServer9101!
 
 Note that the boolean headers `isAdmin`, `isLocal`, and `enabled` must have a value of `true` or `false`.
 
+### CLI Options
+
+To view all available options user the `help` command with the script:
+
+```
+./polarity-user-creation.sh help
+```
+
+This will output the following available options:
+
+```
+Create users based on CSV input
+
+Options:
+  --help          Show help  [boolean]
+  --version       Show version number  [boolean]
+  --username      Username to login as  [string] [required]
+  --password      Password for the given Polarity username  [string] [required]
+  --url           Polarity server url to include schema  [string] [required]
+  --csv           Directory to read CSV files from  [string] [required]
+  --simulate      If provided, the loader will log a preview of the actions it would take but no actions will be taken.  [boolean] [default: false]
+  --ignoreErrors  If provided, the user creation tool will attempt to create all users in the CSV rather than stop on the first failure.  [boolean] [default: false]
+```
+
 ### Example Script Usage
 
 Basic usage:
